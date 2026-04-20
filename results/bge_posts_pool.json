@@ -1,0 +1,37 @@
+[
+  {
+    "model_name": "BAAI/bge-base-en-v1.5",
+    "input_mode": "posts_list_pool",
+    "mask_mbti": true,
+    "max_posts": 16,
+    "min_post_words": 3,
+    "batch_size": 24,
+    "train_stats": {
+      "input_mode": "posts_list_pool",
+      "num_documents": 6940,
+      "avg_raw_posts": 48.75,
+      "avg_kept_posts": 15.96,
+      "max_posts": 16,
+      "min_post_words": 3
+    },
+    "test_stats": {
+      "input_mode": "posts_list_pool",
+      "num_documents": 1735,
+      "avg_raw_posts": 48.71,
+      "avg_kept_posts": 15.96,
+      "max_posts": 16,
+      "min_post_words": 3
+    },
+    "train_seconds": 202.95,
+    "centroid": {
+      "accuracy": 0.19827089337175793,
+      "macro_f1": 0.12375182384593146,
+      "report": "              precision    recall  f1-score   support\n\n        ENFJ       0.06      0.18      0.10        38\n        ENFP       0.24      0.10      0.14       135\n        ENTJ       0.05      0.09      0.06        46\n        ENTP       0.25      0.07      0.10       137\n        ESFJ       0.01      0.44      0.02         9\n        ESFP       0.00      0.00      0.00        10\n        ESTJ       0.00      0.00      0.00         8\n        ESTP       0.08      0.11      0.09        18\n        INFJ       0.36      0.04      0.08       294\n        INFP       0.43      0.41      0.42       366\n        INTJ       0.29      0.06      0.09       218\n        INTP       0.33      0.33      0.33       261\n        ISFJ       0.12      0.15      0.14        33\n        ISFP       0.04      0.04      0.04        54\n        ISTJ       0.06      0.10      0.08        41\n        ISTP       0.21      0.48      0.29        67\n\n    accuracy                           0.20      1735\n   macro avg       0.16      0.16      0.12      1735\nweighted avg       0.29      0.20      0.20      1735\n"
+    },
+    "lr": {
+      "accuracy": 0.2017291066282421,
+      "macro_f1": 0.14235649831642422,
+      "report": "              precision    recall  f1-score   support\n\n        ENFJ       0.08      0.26      0.12        38\n        ENFP       0.25      0.18      0.21       135\n        ENTJ       0.05      0.17      0.08        46\n        ENTP       0.27      0.09      0.13       137\n        ESFJ       0.01      0.33      0.03         9\n        ESFP       0.01      0.10      0.02        10\n        ESTJ       0.00      0.00      0.00         8\n        ESTP       0.04      0.11      0.06        18\n        INFJ       0.38      0.08      0.13       294\n        INFP       0.52      0.35      0.42       366\n        INTJ       0.30      0.06      0.09       218\n        INTP       0.39      0.29      0.33       261\n        ISFJ       0.06      0.09      0.07        33\n        ISFP       0.10      0.17      0.12        54\n        ISTJ       0.09      0.20      0.12        41\n        ISTP       0.26      0.43      0.33        67\n\n    accuracy                           0.20      1735\n   macro avg       0.18      0.18      0.14      1735\nweighted avg       0.33      0.20      0.23      1735\n"
+    }
+  }
+]
