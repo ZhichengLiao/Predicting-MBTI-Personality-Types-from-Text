@@ -1,24 +1,46 @@
-```
-mbti-project/
-├── data/
-│   ├── raw/                  # A: 原始数据
-│   │   └── mbti_1.csv
-│   ├── processed/            # A: 清洗后数据
-│   │   ├── train.csv
-│   │   └── test.csv
-│   └── eda_report.html       # A: EDA 报告
-├── models/
-│   ├── bm25_retrieval.py     # B: BM25 检索
-│   ├── tfidf_classifiers.py  # B: TF-IDF + LR/NB
-│   ├── embedding_pipeline.py # C: Dense retrieval
-│   └── dichotomy_classifiers.py  # D: 四维度二分类
-├── evaluation/
-│   ├── evaluator.py          # D: 统一评估框架
-│   └── confusion_analysis.py # D: Dichotomy 混淆分析
-├── app/
-│   └── streamlit_app.py      # E: 前端
-├── results/                  # 所有人的输出结果
-├── requirements.txt
-└── README.md
+# MBTI Personality Type Prediction
+
+CS410 project for predicting MBTI personality type from text.
+
+## Setup
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
+## Run the Web App
+
+```bash
+streamlit run app/streamlit_app.py
+```
+
+Then open the local URL shown by Streamlit. The app uses the trained model at:
+
+```text
+results/dichotomy_classifiers.pkl
+```
+
+## Online Demo
+
+Try the deployed app here:
+
+https://mbti-by-perfectiveai.streamlit.app/
+
+This demo is hosted on Streamlit Community Cloud (`streamlit.app`) from a GitHub repository.
+
+## Optional: Retrain the Dichotomy Model
+
+```bash
+python models/dichotomy_classifiers.py
+```
+
+This expects the processed data in `data/processed/` and writes the trained model to `results/`.
+
+## Key Files
+
+- `app/streamlit_app.py`: Streamlit app entry point
+- `app/pages/Advanced_Mode.py`: advanced analysis page
+- `models/dichotomy_classifiers.py`: four binary classifiers for E/I, S/N, T/F, J/P
+- `requirements.txt`: Python dependencies
